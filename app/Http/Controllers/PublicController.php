@@ -18,3 +18,4 @@ class PublicController extends Controller
         return view('aggiungiProdotto');
     }
 }
+

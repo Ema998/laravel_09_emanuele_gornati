@@ -8,17 +8,22 @@
     @foreach ($prodotti as $prodotto )
         <div class="col-12 col-md-6">
             <x-prodotti-card 
-                :prodotto="$prodotto" 
-                nome="{{ $prodotto->nome }}" 
-                prezzo="{{ $prodotto->prezzo }}" 
-                descrizione="{{ $prodotto->descrizione }}" 
-                id="{{ $prodotto->id }}">             
+                :prodotto = "$prodotto">             
             </x-prodotti-card>  
         </div>
     @endforeach
     @if (session('success'))
         <div class="alert alert-success">
-            {{ session('success') }}
+            {{ session('message') }}
+        </div>
+    @endif
+    @if( $errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
         </div>
     @endif
 </x-layout>

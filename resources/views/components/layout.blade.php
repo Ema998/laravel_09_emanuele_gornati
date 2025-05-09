@@ -13,15 +13,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Prodotti</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"></a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ route('homepage') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('prodotti') }}">Prodotti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('aggiungiProdotto') }}">Aggiungi prodotto</a>
+                </li>
             </ul>
         </div>
     </nav>
