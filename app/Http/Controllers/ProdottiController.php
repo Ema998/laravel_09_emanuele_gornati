@@ -8,6 +8,11 @@ use App\Http\Requests\ProdottiRequest;
 
 class ProdottiController extends Controller
 {
+    public function prodotti () {
+        $prodotti = Game::all();
+        return view('prodotti', compact('prodotti'));
+    }
+
     public function store(ProdottiRequest $request)
     {
         $nome = $request->input('nome');
