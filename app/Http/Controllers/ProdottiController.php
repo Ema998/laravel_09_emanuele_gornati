@@ -21,7 +21,7 @@ class ProdottiController extends Controller
         $img = null;
 
         if($request->file('img')){
-            $img = $request->file('img')->store('public/img');
+            $img = $request->file('img')->store('img', 'public');
         }
         
         
@@ -34,9 +34,3 @@ class ProdottiController extends Controller
 
         return redirect()->route('prodotti')->with('message', 'Prodotto aggiunto con successo!');
     }
-
-    public function prodottiList(){
-        $prodotti = Game::all();
-        return view('prodotto.prodotti', ['prodotti' => $prodotti]);
-    }
-}
