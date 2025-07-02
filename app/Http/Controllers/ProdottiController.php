@@ -34,3 +34,4 @@ class ProdottiController extends Controller
 
         return redirect()->route('prodotti')->with('message', 'Prodotto aggiunto con successo!');
     }
+}
