@@ -5,7 +5,7 @@
         <a href="{{ route('aggiungiProdotto') }}"class="btn btn-primary">Aggiungi Prodotto</a>
     @foreach ($prodotti as $prodotto )
         <div class="col-12 col-md-6">
-            <x-prodottiCard :prodotto = "$prodotto" />
+            <x-prodottiCard :prodotto="$prodotto" />
         </div>
     @endforeach
 
